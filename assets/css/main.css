@@ -530,13 +530,16 @@ body{
         font-size: 20px;
     }
     .sc-plumu .text-box .desc {
-        padding: 0 10px;
+        padding: 0 3px;
         font-size: 16px;
         line-height: 25px;
     }
     .sc-plumu .text-box .more img {
         width: 18px;
         height: 18px
+    }
+    .sc-plumu .text-box .more img {
+        transform: translateY(25px);
     }
 
 }
