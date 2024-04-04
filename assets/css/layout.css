@@ -1,0 +1,669 @@
+@import './font.css';
+@import './reset.css';
+@import './common.css';
+
+.header .btn-menu {display: none;}
+.side-gnb{display: none;}
+.wrapper{overflow: hidden;}
+.wrapper::before{
+    display: block;
+    content: '';
+    height: 35px;
+    background: #eee;
+}
+
+.header .dimmed{
+    position: fixed;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+.header .dimmed.on{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+.header{
+    z-index: 10;
+}
+
+.header .group-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    min-height: 100px;
+}
+
+.header .group-flex::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 300%;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.header .logo-area{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.header .util-area{
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    top: -35px;right: 0;
+    color: #858585;
+    line-height: 35px;
+    font-size: 14px;
+}
+
+.header .util-area a:hover{
+    display: block;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.header .lang-area{
+    display: flex; 
+    align-items: center;
+    gap: 16px;
+}
+
+.header .lang-area .link-search{
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #ddd;
+    background: url(../img/ic_search.png) no-repeat center;
+}
+.header .lang-area select{
+    background: url(https://www.pulmuone.co.kr/pulmuone/img/select_bar.png) #fff;
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    margin-left: 15px;
+    font-size: 13px;
+    color: #bbb;
+    border: 2px solid #ddd;
+    padding: 10px 15px;
+    border-radius: 20px;
+    padding-right: 28px;
+    position: relative;
+    height: auto;
+
+    appearance: none;
+}
+
+.header .sns-area{
+    display: flex;
+    gap: 21px;
+    margin-left: -8px;
+
+}
+.header .sns-area a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+
+}
+
+
+.gnb .nav-list{
+    display: flex;
+}
+.gnb .nav-item{
+    position: relative;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+}
+.gnb .nav-item .nav{
+    line-height: 60px;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+.gnb .nav-item .nav:hover{
+    color: #8dc63f;
+    transition: .3s;
+}
+
+.header .sub-list{
+    display: none;
+    position: absolute;
+    top: 100%;
+    background: #f9f9f9;
+    left: 0;
+    z-index: 5;
+    padding: 31px 0 40px;
+}
+.header .sub-list.on{display: block;}
+.header .sub-list .sub-item{
+    width: 275px;
+    padding: 10px 0;
+}
+.header .sub-list .sub-item:hover{
+    /* color: #f00; */
+    font-weight: bold;
+    transition: .3s;
+}
+
+
+
+
+/* 검색 영역 */
+.search-area{
+    display: none;
+    position: fixed;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:1001;
+    background: url(../img/search-bg.jpg) no-repeat center/cover;
+}
+.search-area.on{
+    display: block;
+}
+.search-area fieldset{
+    display: grid;
+    grid-template-columns:1fr 19px;
+    gap: 10px;
+    border: none;
+}
+.search-area .search-close{
+    position: absolute;
+    top: 20px;left: 18px;
+    width: 10px;
+    height: 18px;
+    background: url(../img/btn-close-search.png) no-repeat center / 100% auto;
+}
+.search-area form{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 7px;
+}
+.search-area input{
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+}
+.search-area input::placeholder{
+    color:#fff;
+}
+.search-area .search-go{
+    width: 19px;
+    height: 24px;
+    background: url(../images/ic_search.png) no-repeat 0 3px / 19px auto;
+}
+
+
+
+/* 열렸을때 */
+
+body{
+    height:auto;
+}
+body::after{
+    display:none;
+    opacity: 0;
+}
+
+
+
+
+/* 푸터영역 */
+
+.footer{
+    border-top: 1px solid #efefef;
+    background: #f9f9f9;
+    padding: 70px 0 100px;    
+}
+.footer .inner{
+    display: flex;
+    gap: 200px;
+}
+
+.footer .logo{
+    max-width: 352px;
+}
+
+.footer .logo a img{
+    max-width: 107px;
+    mix-blend-mode: multiply;
+}
+
+.footer .wrap{
+    flex: 1;
+}
+
+.footer .gnb-footer{}
+
+.footer .nav-list{
+    display: flex;
+    margin-bottom: 20px;
+}
+.footer .nav-item{
+    font-size: 18px;
+    color: #000;
+    font-weight: 400;
+}
+
+.footer .nav-item a{
+    display: flex;
+}
+
+
+.footer .nav-item+.nav-item a::before{
+    display: block;
+    content: '';
+    background: #ccc;
+    width: 1px;
+    height: 13x;
+    margin: 0 15px;
+}
+.footer .nav-item a img{
+    width: 20px;
+    height: 20px;
+}
+.footer .addr-area{
+    font-size: 13px;
+}
+.footer .addr-area p{
+    margin-top: 10px;
+    color: rgb(153, 153, 153);   
+}  
+.footer .addr-area p::after{
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 13px;
+    background: #ccc;
+    right: 0;
+
+}
+.footer strong{
+    font-weight: 800;
+}
+
+.footer .bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    color: #777;
+}
+.footer .bot-right{
+    display: flex;
+    align-items: end;
+    gap: 20px;
+}
+.footer .bot-right .img-box{
+    max-width: 40px;
+}
+.footer .sns-box{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer .family-box .content{
+    display: none;
+}
+
+
+
+
+/* 1023~최대 */
+
+/* 721~1022 (1023에서 바뀜)*/
+@media (max-width:1023px) {
+
+
+    .footer .inner {
+        gap: 120px;
+    }
+
+    .footer .nav-list {
+        flex-wrap: wrap;
+    }
+
+    .footer .nav-item {
+        margin-top: 10px;
+    }
+
+    .header .sns-area a {
+        width: 25px;
+        height: 25px;
+    }
+
+    .header .lang-area .link-search {
+        width: 27px;
+        height: 27px;
+    }
+    .header .lang-area select{
+        padding: 5px 22px;
+        background-position: right 12.5px center;
+    }
+}
+
+/* 721~766 (767에서 바뀜)*/
+@media (max-width:767px) {
+    
+    .wrapper::before {display: none;}
+    .header .sns-area {display: none;}
+    .header .lang-area select {display: none;}
+    .header .gnb {display: none;}
+
+    .header .logo-area img{width: 85px;}
+
+    .header .group-flex {
+        position: relative;
+        min-height: 65px;
+        display: flex;
+    }
+    .header .lang-area .link-search {
+        position: absolute;
+        right: 0;
+    }
+
+    /* 사이드nav */
+    .side-gnb {display: block;}
+
+    .header .btn-menu {
+        display: block;
+        z-index: 10;
+        position: absolute;
+        right: 0;
+    }
+
+    .header.on .btn-search img {
+        filter: invert(1);
+    }
+    .header.on .btn-menu img {
+        filter: invert(1);
+    }
+    
+    .header .btn-menu {
+        display: block;
+        z-index: 10;
+        position: absolute;
+        right: 20px;
+    }
+
+
+    .side-util {
+        background: #8dc63f;
+        padding: 80px 25px 35px 25px;
+    }
+    .side-util ul{
+        display: flex;
+        justify-content: space-between;
+    }
+    .side-util a{
+        display: block;
+        color: #fff;
+        font-weight: 400;
+    }
+    .side-util .recruit{
+        position: relative;
+    }
+    .side-util .recruit:before {
+        content: '';
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: url(https://www.pulmuone.co.kr/pulmuone/img/b_icon01.png);
+        background-size: 100%;
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .side-util .cs{
+        position: relative;
+    }
+    .side-util .cs:before {
+        content: '';
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: url(https://www.pulmuone.co.kr/pulmuone/img/b_icon02.png);
+        background-size: 100%;
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .side-util .shop{
+        position: relative;
+    }
+    .side-util .shop:before {
+        content: '';
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: url(https://www.pulmuone.co.kr/pulmuone/img/b_icon03.png);
+        background-size: 100%;
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    }
+
+
+
+    .side-gnb{display: block;}
+    .header .btn-menu {
+        z-index: 10;
+        top: 8px;
+        left: 25px;
+        width: 50px;
+        height: 50px;
+    }
+    .side-gnb{
+        position: fixed;
+        top: 0;left: 0;
+        z-index: 10;
+        transform: translateX(-100%);
+        width: 80%;
+        height: 100%;
+        background: #fff;
+        transition: 0.3s;
+        /* padding: 0 20px; */
+        overflow-y: auto;
+    }
+    .side-gnb.on{
+        transform: translateX(0);
+    }
+    .side-gnb .close {
+        position: absolute;
+        top: 20px;right: 20px;
+        width: 15px;
+        height: 15px;
+    }
+    
+    .side-gnb .flex-area {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 64px;
+    }
+    .side-gnb .side-logo{
+        width: 120px;
+        filter: grayscale(100%);
+        padding: 0 20px;
+    }
+
+    .side-gnb .side-list{}
+    .side-gnb .nav{
+        padding: 0 18px;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 74px;
+    }
+    .side-gnb .sub-list{
+        color: #6c6d6f;
+        top: 100%;
+    }
+    .side-gnb .sub-list li{
+        padding-left: 16px;
+        margin-bottom: 16px;
+        line-height: 28px;
+    }
+    .side-gnb .sub-list .sub{
+        padding: 0 20px;
+    }
+
+
+
+    .side-gnb .flex{
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #ebeef2;
+    }
+
+    .side-gnb .nav.beta{ position: relative; }
+    .side-gnb .nav.beta::after {
+        position: absolute;
+        width: 29px;
+        height: 16px;
+        display: block;
+        content: "BETA";
+        color: rgba(35,35,36,.5);
+        font-size: 16px;
+        font-weight: 700;
+        font-family: BM HANNA\ 11yrs old,sans-serif;
+        text-transform: lowercase;
+        top: -2px;left: 50px;
+    }
+    .side-gnb .side-item:last-child{
+        border-bottom: 1px solid #ebeef2;
+    }
+    .side-gnb .top{
+        margin-top: 25px;
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+    }
+
+    .footer {overflow: hidden;}
+    .footer .info .width{}
+
+
+    .side-gnb strong{
+        display: block;
+        font-weight: bold;
+    }
+
+    .side-gnb .bottom{
+        margin: 35px 0 23px;
+        display: flex;
+        justify-content: space-between;
+
+        color: #a6a7a9;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .side-gnb .left{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 0 20px;
+    }
+
+    .side-gnb .util button{
+        margin: 0 12px;
+    }
+
+    .side-gnb .kor{
+        position: relative;
+        font-weight: bold;
+        line-height: 36px;
+    }
+    .side-gnb .eng{
+        color: #ccc;
+        font-weight: bold;
+        line-height: 36px;
+    }
+    
+    .side-gnb .kor::after{
+        position: absolute;
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 13px;
+        background: #ccc;
+        top: 11px;right: -15px;
+    }
+
+    /* 화살표 토글 버튼 */
+    .side-list .flex.on .btn-arrow{ 
+        transform: rotate(180deg);
+        padding: 0 20px;
+    }
+
+
+    .sc-faq .faq-item .question.on img{
+        transform: rotate(180deg);
+    }
+    .side-gnb .side-item button{
+        margin-left: auto;
+        padding-right: 20px;
+        transition: 0.3s;
+    }
+    .side-gnb .sub-list{
+        display: none;
+        position: relative;
+    }
+
+    .footer .inner {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footer .nav-list {
+        margin-bottom: 30px;
+    }
+    .footer .bottom  {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+
+    }
+
+
+/* 0~720 (721에서 바뀜)*/
+@media (max-width:721px) {
+
+
+}

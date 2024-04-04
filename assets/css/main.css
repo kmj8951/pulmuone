@@ -1,0 +1,599 @@
+body{
+    margin-bottom: 195px;
+}
+
+/* 메인공통 */
+.headline{
+    font-size: 42px;
+    text-align: center; 
+    font-weight: 500;
+}
+
+.link-detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 50px;
+    border: 2px solid #222;
+}
+
+
+/* 메인비주얼 */
+.sc-visual{ position: relative; }
+.sc-visual .swiper{}
+.sc-visual .swiper-slide a{display: block; position: relative;}
+.sc-visual .img-box{
+    position: relative;
+    height: calc(100vh - 195px);
+    /* padding-bottom: calc((550/1920)*100%);  */
+}
+.sc-visual img{
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sc-visual .text-box .text-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    /* left: 245px;
+    bottom: 10.24%; */
+    color: #fff;
+}
+.sc-visual .text-box .title {
+    font-size: 54px;
+    font-weight: 300;
+    font-weight: bold;
+    text-shadow: 1px 1px 6px #666;
+    opacity: 0;
+    transform: translateY(50px);
+    
+}
+.sc-visual .text-box .desc {
+    font-weight: 400;
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 1px 1px 6px #666;
+    opacity: 0;
+    transform: translateY(50px);
+}
+.sc-visual .text-box .more {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #fff;
+    text-shadow: 1px 1px 6px #666;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.sc-visual .swiper-slide-active .text-box .title {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: transform 1s .3s, opacity 1s .3s;
+}
+.sc-visual .swiper-slide-active .text-box .desc {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: transform 1s .5s, opacity 1s .5s;
+}
+.sc-visual .swiper-slide-active .text-box .more {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: transform 1s .6s, opacity 1s .6s;
+}
+
+
+
+
+.sc-visual .btn{
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    /* background: #f00; */
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    filter: invert(1);
+    /* mix-blend-mode: multiply; */
+}
+.sc-visual .btn.prev{
+    margin-left: -630px;
+}
+.sc-visual .btn.next{
+    margin-left: 600px;
+}
+
+.sc-visual .swiper-pagination{
+    bottom: 30px;
+}
+.sc-visual .swiper-pagination .swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+    background: #eee;
+    margin: 0;
+    margin: 0 6px;
+}
+
+
+
+/* sc-intro 영역 */
+.sc-intro{}
+.sc-intro .headline{
+    margin: 84px 0 66px;
+}
+
+.sc-intro .group-intro:nth-of-type(2n) .flex-area{
+    /* flex-direction: row-reverse; */
+    direction: rtl; /* 그리드 컨테이너의 방향을 오른쪽에서 왼쪽으로 변경합니다. */
+}
+.sc-intro .group-intro:nth-of-type(2n) .text-box{
+    text-align: left;
+}
+
+.sc-intro .group-intro:nth-of-type(2n) .link-detail{
+    margin-right: auto;
+}
+
+.sc-intro .flex-area{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 68px;
+
+}
+.sc-intro .flex-area .img-box{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    flex: 1;
+}
+.sc-intro .flex-area .img-box img{
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #d7d7d7;
+}
+
+.sc-intro .flex-area .text-box{
+       flex: 1;
+}
+.sc-intro .flex-area .text-box .title{
+    font-size: 20px;
+}
+.sc-intro .flex-area .text-box .desc{
+    color: #777;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 15px 0 45px;
+}
+
+/* sc-manage 영역 */
+.sc-manage {
+    margin-top: 150px;
+}
+
+
+.sc-manage{
+    margin-top: 150px;
+}
+.sc-manage .headline{
+    padding: 84px 0 66px;
+    color: #fff;
+}
+
+.sc-manage .group-manage.bg{
+    background: url(https://www.pulmuone.co.kr/pulmuone/main/images/main_bg_3.jpg) no-repeat center / cover;
+    padding-bottom: 66px;
+}
+.sc-manage .inner{
+    display: flex;
+    gap: 20px;
+}
+
+.sc-manage .text-box{
+    padding: 50px;
+    flex: 1;
+    max-height: 330px;
+    background:rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.sc-manage .text-box .title{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.sc-manage .text-box .title .img-box{
+    position: relative;
+    max-width: 50px;
+}
+.sc-manage .text-box .title .img-box img{
+    width: 100px;
+}
+
+
+.sc-manage .text-box h3{
+    font-weight: bold;
+    font-size: 24px;
+}
+.sc-manage .text-box p{
+    color: #fff;
+    font-size: 18px;
+    min-height: 84px;
+    margin: 15px 0 45px;
+}
+
+.sc-manage .link-detail{
+    border: 2px solid #dfdfdf;
+}
+.sc-manage .text-box:hover {
+    transform: translateY(-25px);
+    transition: 0.8s
+}
+
+
+/* sc-news 영역 */
+.sc-news{
+    margin-top: 150px;
+}
+.sc-news .headline{
+    margin: 150px 0 66px;
+}
+.sc-news .news-list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 68px;
+}
+.sc-news .news-item {
+    min-width: 0px; 
+    /* 부모가 flex,grid상황에서 자식에 말줄임이 들어가있을댄
+    li한테 줘야해요! */
+}
+.sc-news .news-item .img-box{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56%;
+    overflow: hidden;
+}
+.sc-news .news-item .img-box img{
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid #d7d7d7;
+    transition: 0.8s;
+}
+.sc-news .news-item .text-box{
+    margin-top: 30px;
+    margin-bottom: 45px;
+}
+.sc-news .news-item .text-box h3{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.sc-news .news-item .text-box p{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sc-news .news-item .img-box:hover img {
+    transform: scale(1.05);
+}
+
+
+/* sc-review 영역 */
+
+.sc-plumu{
+    margin-top: 150px;
+    position: relative;
+    padding-bottom: 66px;
+
+}
+.sc-plumu::after {
+
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f3f5f8;
+    z-index: -1;
+}
+
+.sc-plumu .headline{
+    padding: 84px 0 30px;
+}
+.sc-plumu .sub-title{text-align: center;}
+
+.sc-plumu .plumu-list{
+    margin-top: 80px;
+    display: flex;  
+    width: 100%;
+    gap: 2px;
+}
+.sc-plumu .plumu-item {
+    position: relative;
+    flex: 1;
+}
+
+.sc-plumu .plumu-item a{
+    position: relative;
+    display: block;
+}
+
+.sc-plumu .plumu-item .front{
+    position: relative;
+}
+
+.sc-plumu .plumu-item .img-box{
+    position: relative;
+    padding-bottom: 131.58%;
+    background: #f00;
+}
+.sc-plumu .plumu-item .img-box img{
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sc-plumu .title{
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: left;
+    color: #fff;    
+}
+
+.sc-plumu .text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+}
+
+.sc-plumu .text-box .desc{
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: left;
+    color: #fff;
+    text-align: center; 
+    opacity: 0; 
+    transform: translateY(30px);
+    transition: 0.3s 0.1s;
+}
+
+.sc-plumu .text-box .more img{
+    margin: 0 auto;
+    width: 24px;
+    height: 24px;
+    margin-top: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.3s 0.2s;
+}
+
+
+.sc-plumu .plumu-item:hover .title{
+    opacity: 0;
+}
+
+.sc-plumu .plumu-item:hover a::before{
+    position: absolute;
+    top: 0;left: 0;
+    right: 0;bottom: 0;
+    /* background: #047648; */
+    content: '';
+    z-index: 1;
+    opacity: 0.9;
+}
+.sc-plumu .plumu-item:nth-child(1):hover a::before{background: #047648;}
+.sc-plumu .plumu-item:nth-child(2):hover a::before{background: #6db003;}
+.sc-plumu .plumu-item:nth-child(3):hover a::before{background: #7f620381;}
+.sc-plumu .plumu-item:nth-child(4):hover a::before{background: #824bbd;}
+
+
+
+
+.sc-plumu .plumu-item:hover .sub-title{
+    opacity: 1;
+    transform: translateY(0);
+}
+.sc-plumu .plumu-item:hover .desc{
+    opacity: 1;
+    transform: translateY(0);
+}
+.sc-plumu .plumu-item:hover .more img{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 1023~최대 */
+
+/* 767~1022 (1023에서 바뀜)*/
+.sc-intro .flex-area {gap: 50px;}
+@media (max-width:1023px) {
+
+    .headline{
+        margin: 64px 0 44px;
+        font-size: 35px;
+    }
+    .link-detail {
+        width: 160px;
+        height: 40px;
+    }
+
+    .sc-intro .flex-area .img-box {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 11;
+        flex: 1;
+    }
+
+    .sc-intro .flex-area .text-box .title {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .sc-intro .flex-area .text-box .desc {
+        font-size: 15px;
+        line-height: 23px;
+        margin: 15px 0 30px;
+    }
+
+    .sc-news .news-list {gap: 50px;}
+
+    .sc-news .news-item .text-box {
+        margin-bottom: 30px;
+    }
+
+    .sc-manage {
+        margin-top: 150px;
+    }
+
+    .sc-manage .headline {
+        padding: 84px 0 66px;
+        color: #fff;
+    }
+
+    .sc-manage .inner {
+        flex-direction: column;
+    }
+
+    .sc-manage .headline {
+        padding: 42px 0 33px;
+        color: #fff;
+    }
+
+    .sc-manage .text-box {
+        position: relative;
+        padding: 20px;
+    }
+
+    .sc-manage .text-box .title .img-box {
+        position: relative;
+        max-width: 30px;
+    }
+
+    .sc-manage .text-box .title .img-box img {
+        /* width: 30px; */
+        display: none;
+    }
+
+    .sc-manage .link-detail {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        border: 2px solid #dfdfdf;
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+    }
+    .sc-manage .text-box h3 {
+        font-size: 20px;
+    }
+
+    .sc-manage .text-box p {
+        min-height: 20px;
+        margin: 20px 0 0;
+        font-size: 15px;
+    }
+    .sc-manage .text-box:hover {
+        transform: translateY(0px);
+    }
+
+    .sc-plumu .title {
+        top: 30px;
+        left: 30px;
+        font-size: 20px;
+    }
+    .sc-plumu .text-box .desc {
+        padding: 0 10px;
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .sc-plumu .text-box .more img {
+        width: 18px;
+        height: 18px
+    }
+
+}
+
+
+/* 721~766 (767에서 바뀜)*/
+@media (max-width:767px) {
+    .sc-visual .text-box .title {
+        font-size: 32px;
+    }
+    .sc-visual .text-box .desc {
+        font-size: 25px;
+    }
+    .sc-visual .text-box .more {
+        font-size: 11px;
+    }
+
+
+
+    .sc-intro .flex-area {
+        grid-template-columns: initial;
+        grid-template-rows: initial;
+    }
+    .sc-intro .flex-area .img-box {
+        aspect-ratio: 16 / 9;
+    }
+    .sc-news .news-list {
+        gap: 50px 20px;
+    }
+
+    .sc-news .news-list .link-detail {
+        width: 130px;
+        height: 35px;
+    }
+    .sc-news .news-item .text-box {
+        margin-bottom: 15px;
+    }
+
+    .sc-plumu .plumu-list {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2px;
+    }
+    .sc-plumu .plumu-item .img-box {
+        position: relative;
+        padding-bottom: 30%;
+    }
+    .sc-plumu .title {
+        top: 30px;
+        left: 30px;
+        font-size: 30px;
+    }
+
+
+}
+
+/* 0~720 (721에서 바뀜)*/
+@media (max-width:721px) {}

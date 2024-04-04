@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀무원</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- 순서 -->
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <!-- 제이쿼리쓰려면필요한거 -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="inner">
+                <div class="group-flex">
+                    <div class="logo-area">
+                        <h1 class="logo">
+                            <a href="">
+                                <img src="https://www.pulmuone.co.kr/pulmuone/img/logo.png" alt="풀무원">
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="util-area">
+                        <a href="">인재채용</a>
+                        <a href="">고객기쁨센터</a>
+                        <a href="">#풀무원</a>
+                    </div>
+                    <div class="sns-area">
+                        <a href=""><img src="./assets/img/sns01.png" alt="페이스북"></a>
+                        <a href=""><img src="./assets/img/sns02.png" alt="페이스북"></a>
+                        <a href=""><img src="./assets/img/sns03.png" alt="페이스북"></a>
+                        <a href=""><img src="./assets/img/sns04.png" alt="페이스북"></a>
+                    </div>
+                    <div class="lang-area">
+                        <div class="link-search">
+                            <a href="" class="">
+                                <span class="blind">검색</span>
+                            </a>
+                        </div>
+
+                        <select name="lang-list">
+                            <option value="pulmuone" selected="selected">KOR</option>
+                            <option value="en">ENG</option>
+                            <option value="cn">CHN</option>
+                            <option value="jp">JPN</option>
+                        </select>
+                    </div>
+
+
+                </div>
+                <nav class="gnb">
+                    <div class="inner">
+                        <ul class="nav-list">
+                            <li class="nav-item"><a href="" class="nav">회사소개</a>
+                                <ul class="sub-list">
+                                    <li class="sub-item"><a href="" class="sub">CI소개</a></li>
+                                    <li class="sub-item"><a href="" class="sub">연혁</a></li>
+                                    <li class="sub-item"><a href="" class="sub">가치체계</a></li>
+                                    <li class="sub-item"><a href="" class="sub">사업소개</a></li>
+                                    <li class="sub-item"><a href="" class="sub">동반성장</a></li>
+                                    <li class="sub-item"><a href="" class="sub">기업지배구조</a></li>
+                                    <li class="sub-item"><a href="" class="sub">투자정보</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a href="" class="nav">사회책임경영</a>
+                                <ul class="sub-list">
+                                    <li class="sub-item"><a href="" class="sub">개요</a></li>
+                                    <li class="sub-item"><a href="" class="sub">추진전략</a></li>
+                                    <li class="sub-item"><a href="" class="sub">활동 및 실적</a></li>
+                                    <li class="sub-item"><a href="" class="sub">수상</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a href="" class="nav">바른먹거리</a>
+                                <ul class="sub-list">
+                                    <li class="sub-item"><a href="" class="sub">지속가능 식생활</a></li>
+                                    <li class="sub-item"><a href="" class="sub">지속가능식품</a></li>
+                                    <li class="sub-item"><a href="" class="sub">바른먹거리 원칙</a></li>
+                                    <li class="sub-item"><a href="" class="sub">바른먹거리 캠페인</a></li>
+                                    <li class="sub-item"><a href="" class="sub">풀무원 지구식단</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a href="" class="nav">뉴스룸</a>
+                                <ul class="sub-list">
+                                    <li class="sub-item"><a href="" class="sub">풀무원뉴스</a></li>
+                                    <li class="sub-item"><a href="" class="sub">ESG경영</a></li>
+                                    <li class="sub-item"><a href="" class="sub">멀티미디어</a></li>
+                                    <li class="sub-item"><a href="" class="sub">자료&공지</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+
+                <!-- 검색창 영역 -->
+                <div class="search-area">
+                    <form action="">
+                        <fieldset>
+                            <legend><span class="blind">검색</span></legend>
+                            <input type="text" placeholder="검색어를 입력해주세요.">
+                            <button class="" aria-label="검색"></button>
+                        </fieldset>
+                    </form>
+
+                    <button class="search-close"><span class="blind">검색창 닫기</span></button>
+                </div>
+
+                <!-- 사이드 gnb -->
+                <button class="btn-menu">
+                    <svg width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg" class="">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M19.995 2H0V0h19.995v2zM19.995 9.029H0v-2h19.995v2zM19.995 16.057H0v-2h19.995v2z"
+                            fill="#000"></path>
+                    </svg>
+                </button>
+                <div class="dimmed"></div>
+                <div class="side-gnb">
+                    <h3 class="blind">풀무원 전체메뉴</h3>
+
+                   
+
+                    <div class="flex-area">
+                        <!-- 닫기버튼 -->
+                        <button class="close"><svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="">
+                                <path
+                                    d="M7.25 9l-7 7 1.752 1.748L9 10.75l7 7 1.748-1.752L10.75 9l7-7L15.998.252 9 7.25l-7-7L.252 2.002 7.25 9z"
+                                    fill="#232324"></path>
+                            </svg></button>
+
+                        <!-- 사이드gnb 안 로고 -->
+                        <div class="side-logo">
+                            <a href="">
+                                <img src="https://www.pulmuone.co.kr/pulmuone/img/logo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="side-util">
+                        <ul>
+                            <li><a href="" class="recruit">인재채용</a></li>
+                            <li><a href="" class="cs">고객기쁨센터</a></li>
+                            <li><a href="" class="shop">풀무원SHOP</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- GNB -->
+                    <ul class="side-list">
+                        <li class="side-item">
+
+                            <div class="flex">
+                                <a href="" class="nav">회사소개</a>
+                                <button type="button" class="btn-arrow"><svg width="12" height="8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" class="">
+                                        <path d="M2 2l4 4 4-4" stroke="#232324" stroke-width="1.5"
+                                            stroke-linecap="square"></path>
+                                    </svg></button>
+                            </div>
+
+                            <ul class="sub-list">
+                                <li class="sub-item"><a href="" class="sub">CI소개</a></li>
+                                <li class="sub-item"><a href="" class="sub">연혁</a></li>
+                                <li class="sub-item"><a href="" class="sub">가치체계</a></li>
+                                <li class="sub-item"><a href="" class="sub">사업소개</a></li>
+                                <li class="sub-item"><a href="" class="sub">동반성장</a></li>
+                                <li class="sub-item"><a href="" class="sub">기업지배구조</a></li>
+                                <li class="sub-item"><a href="" class="sub">투자정보</a></li>
+                            </ul>
+                        </li>
+                       <li class="side-item">
+
+                            <div class="flex">
+                                <a href="" class="nav">사회책임경영</a>
+                                <button type="button" class="btn-arrow"><svg width="12" height="8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" class="">
+                                        <path d="M2 2l4 4 4-4" stroke="#232324" stroke-width="1.5"
+                                            stroke-linecap="square"></path>
+                                    </svg></button>
+                            </div>
+                            
+                            <ul class="sub-list">
+                                <li class="sub-item"><a href="" class="sub">개요</a></li>
+                                <li class="sub-item"><a href="" class="sub">추진전략</a></li>
+                                <li class="sub-item"><a href="" class="sub">활동 및 실적</a></li>
+                                <li class="sub-item"><a href="" class="sub">수상</a></li>
+                            </ul>
+                        </li>
+                        <li class="side-item">
+
+                            <div class="flex">
+                                <a href="" class="nav">바른먹거리</a>
+                                <button type="button" class="btn-arrow"><svg width="12" height="8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" class="">
+                                        <path d="M2 2l4 4 4-4" stroke="#232324" stroke-width="1.5"
+                                            stroke-linecap="square"></path>
+                                    </svg></button>
+                            </div>
+                            
+                            <ul class="sub-list">
+                                <li class="sub-item"><a href="" class="sub">지속가능 식생활</a></li>
+                                <li class="sub-item"><a href="" class="sub">지속가능식품</a></li>
+                                <li class="sub-item"><a href="" class="sub">바른먹거리 원칙</a></li>
+                                <li class="sub-item"><a href="" class="sub">바른먹거리 캠페인</a></li>
+                                <li class="sub-item"><a href="" class="sub">풀무원 지구식단</a></li>
+                            </ul>
+                        </li>
+                        <li class="side-item">
+
+                            <div class="flex">
+                                <a href="" class="nav">뉴스룸</a>
+                                <button type="button" class="btn-arrow"><svg width="12" height="8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" class="">
+                                        <path d="M2 2l4 4 4-4" stroke="#232324" stroke-width="1.5"
+                                            stroke-linecap="square"></path>
+                                    </svg></button>
+                            </div>
+                            
+                            <ul class="sub-list">
+                                <li class="sub-item"><a href="" class="sub">풀무원뉴스</a></li>
+                                <li class="sub-item"><a href="" class="sub">ESG경영</a></li>
+                                <li class="sub-item"><a href="" class="sub">멀티미디어</a></li>
+                                <li class="sub-item"><a href="" class="sub">자료&공지</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="util">
+                        <div class="bottom">
+                            <div class="left">
+                                <a href="">뮤지엄김치간</a>
+                                <a href="">올가 오늘만이가격</a>
+                                <a href="">이벤트 더보기</a>
+                            </div>
+                            <div class="search-area">
+                                <form action="">
+                                    <fieldset>
+                                        <legend><span class="blind">검색</span></legend>
+                                        <input type="text" placeholder="검색어를 입력해주세요.">
+                                        <button class="" aria-label="검색"></button>
+                                    </fieldset>
+                                </form>
+            
+                                <button class="search-close"><span class="blind">검색창 닫기</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="container">
+            <!-- 메인비주얼 -->
+            <section class="sc-visual">
+                <h2 class="blind">메인비주얼</h2>
+                <div class="swiper main-slide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="./assets/img/mainslide01.jpg" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <div class="text-inner">
+                                        <p class="title">풀무원</p>
+                                        <p class="desc">오늘도 부탁해</p>
+                                        <a href="" class="more">VIEW MORE</a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="./assets/img/mainslide02.jpg" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <div class="text-inner">
+                                        <p class="title">나를 위한 선물</p>
+                                        <p class="desc">건강한 자연재료</p>
+                                        <a href="" class="more">VIEW MORE</a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="./assets/img/mainslide03.jpg" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <div class="text-inner">
+                                        <p class="title">풀무원을 만나는 순간,</p>
+                                        <p class="desc">모든 것이 즐겁다.</p>
+                                        <a href="" class="more">VIEW MORE</a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="./assets/img/mainslide04.jpg" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <div class="text-inner">
+                                        <p class="title">여왕의 방식</p>
+                                        <p class="desc">만족을 요리하다</p>
+                                        <a href="" class="more">VIEW MORE</a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 여기다가 -->
+                    <button class="btn prev">
+                        <img src="./assets/img/btn-prev.svg" alt="">
+                    </button>
+                    <button class="btn next">
+                        <img src="./assets/img/btn-next.svg" alt="">
+                    </button>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <div class="inner">
+                <!-- sc-intro 영역 -->
+                <section class="sc-intro">
+                    <h2 class="blind">바른먹거리</h2>
+
+                    <div class="group-intro" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="headline">바른먹거리</h3>
+                        <div class="flex-area">
+                            <div class="img-box">
+                                <img src="./assets/img/intro01.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                                <p class="title">내 가족의 건강과 행복을 위한 바른먹거리는 무엇일까요?</p>
+                                <p class="desc">풀무원에서는 유기농 방식으로 재배된 채소와 과일을 구매할 수 있습니다. 또한 신선한 햇살과 자연 그대로의 환경에서 자란 식재료를
+                                    통해 건강한 식단을 구성할 수 있습니다. </p>
+
+                                <a href="" class="link-detail">자세히 알아보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-intro" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="headline">지속가능 식생활</h3>
+                        <div class="flex-area">
+                            <div class="img-box">
+                                <img src="./assets/img/intro02.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                                <p class="title">여러분도 지속가능 식생활을 시작해보세요</p>
+                                <p class="desc">풀무원을 이용하면 화학농약을 최소화한 유기농 채소와 과일을 구매할 수 있어 건강과 환경을 모두 고려할 수 있습니다. 지역 농가를
+                                    지원하고 지구를 위한 조그만 노력이 큰 변화를 이끌어낼 수 있습니다.</p>
+                                <a href="" class="link-detail">자세히 알아보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-intro" data-aos="fade-up" data-aos-delay="500">
+                        <h3 class="headline">바른먹거리 캠페인</h3>
+                        <div class="flex-area">
+                            <div class="img-box">
+                                <img src="./assets/img/intro03.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                                <p class="title">어렸을 때 입맛이 평생 건강</p>
+                                <p class="desc">어릴 적부터 입맛을 건강하게 키우는 것이 중요합니다. 어린이기간에 올바른 식습관을 형성하면 평생 건강을 유지할 수 있습니다.
+                                    신선한 과일과 채소, 영양가 있는 식품을 적절히 섭취하여 건강한 신체와 마음을 키워야 합니다.
+                                    풀무원이 함께 하겠습니다.
+                                </p>
+                                <a href="" class="link-detail">자세히 알아보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- sc-manage 영역 -->
+            <section class="sc-manage">
+                <div class="group-manage bg">
+                    <h2 class="headline">사회책임경영</h2>
+                    <div class="inner">
+                        <div class="text-box">
+                            <div class="title">
+                                <h3>LOHAS 전략</h3>
+                                <div class="img-box">
+                                    <img src="https://www.pulmuone.co.kr/pulmuone/img/main_sec03_icon01.png" alt="">
+                                </div>
+                            </div>
+
+                            <p>‘이웃사랑’과 ‘생명존중’ 정신을 바탕으로 로하스 생활(LOHAS Living)을 구현해나갑니다.</p>
+                            <a href="" class="link-detail">자세히 알아보기</a>
+                        </div>
+
+                        <div class="text-box">
+                            <div class="title">
+                                <h3>가치창출 Process</h3>
+                                <div class="img-box">
+                                    <img src="https://www.pulmuone.co.kr/pulmuone/img/main_sec03_icon02.png" alt="">
+                                </div>
+                            </div>
+                            <p>
+                                끊임없는 혁신을 통해 공유가치를 창출함으로써
+                                지속가능한 성장을 도모하겠습니다.</p>
+                            <a href="" class="link-detail">자세히 알아보기</a>
+                        </div>
+
+                        <div class="text-box">
+                            <div class="title">
+                                <h3>수상내역</h3>
+                                <div class="img-box">
+                                    <img src="https://www.pulmuone.co.kr/pulmuone/img/main_sec03_icon03.png" alt="">
+                                </div>
+                            </div>
+
+                            <p>풀무원은 사회책임경영을 통해 ‘글로벌 No.1 기업’으로 도약하겠습니다.</p>
+                            <a href="" class="link-detail">자세히 알아보기</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- sc-news 영역 -->
+            <div class="inner">
+                <section class="sc-news">
+                    <h2 class="headline">뉴스룸</h2>
+
+                    <ul class="news-list">
+                        <li class="news-item">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="./assets/img/news01.jpg" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h3>풀무원, 이사회 중심경영</h3>
+                                    <p>지속가능한 선진지배구조 체제 확립</p>
+                                </div>
+                                <span class="link-detail">자세히 알아보기</span>
+                            </a>
+                        </li>
+                        <li class="news-item">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="./assets/img/news02.jpg" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h3>풀무원 뮤지엄김치</h3>
+                                    <p>외국인 대상 김치 체험 프로그램 확대</p>
+                                </div>
+                                <span class="link-detail">자세히 알아보기</span>
+                            </a>
+                        </li>
+                        <li class="news-item">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="./assets/img/news03.jpg" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h3>풀무원 올가홀푸드</h3>
+                                    <p>국내산 무항생제 등심 돈카츠 2종 출시</p>
+                                </div>
+                                <span class="link-detail">자세히 알아보기</span>
+                            </a>
+                        </li>
+                        <li class="news-item">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="./assets/img/news04.jpg" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h3>컬래버레이션 이벤트</h3>
+                                    <p>풀무원푸드앤컬처 부산엑스더스카이, 풀무원아미오 브랜드와 컬래버레이션</p>
+                                </div>
+                                <span class="link-detail">자세히 알아보기</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- sc-plumu 영역 -->
+            <section class="sc-plumu">
+                <div class="inner">
+                    <h2 class="headline">풀무원</h2>
+                    <p class="sub-title">풀무원 정신은 스스로 일군 풀무원농장에서 유기농을 통해 이웃사랑, 생명존중을 <br>
+                        실천하는 데 한평생을 바쳤던 위대한 농부이자 성실한 평화주의자 원경선으로부터 시작합니다.
+                    </p>
+                    <ul class="plumu-list">
+                        <li class="plumu-item">
+                            <a href="">
+                                <div class="front">
+                                    <div class="img-box">
+                                        <img src="https://www.pulmuone.co.kr/pulmuone/main/images/s04_list_img1.jpg"
+                                            alt="front">
+                                    </div>
+                                    <h3 class="title">가치체계</h3>
+                                </div>
+                                <div class="back">
+                                    <div class="text-box">
+                                        <p class="desc">로하스 기업 풀무원의<br> 미션을 소개합니다. </p>
+                                        <span class="more"><img src="./assets/img/plus.png" alt=""></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="plumu-item">
+                            <a href="">
+                                <div class="front">
+                                    <div class="img-box">
+                                        <img src="https://www.pulmuone.co.kr/pulmuone/main/images/s04_list_img2.jpg"
+                                            alt="front">
+                                    </div>
+                                    <h3 class="title">히스토리</h3>
+                                </div>
+                                <div class="back">
+                                    <div class="text-box">
+                                        <p class="desc">사람과 자연을 함께<br> 사랑해온 풀무원의 시간.</p>
+                                        <span class="more"><img src="./assets/img/plus.png" alt=""></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="plumu-item">
+                            <a href="">
+                                <div class="front">
+                                    <div class="img-box">
+                                        <img src="https://www.pulmuone.co.kr/pulmuone/main/images/s04_list_img3.jpg"
+                                            alt="front">
+                                    </div>
+                                    <h3 class="title">사회책임경영</h3>
+                                </div>
+                                <div class="back">
+                                    <div class="text-box">
+                                        <p class="desc">지속가능한 사회와<br> 지구환경을 위한 경영활동.</p>
+                                        <span class="more"><img src="./assets/img/plus.png" alt=""></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="plumu-item">
+                            <a href="">
+                                <div class="front">
+                                    <div class="img-box">
+                                        <img src="https://www.pulmuone.co.kr/pulmuone/main/images/s04_list_img4.jpg"
+                                            alt="front">
+                                    </div>
+                                    <h3 class="title">풀무원 사업</h3>
+                                </div>
+                                <div class="back">
+                                    <div class="text-box">
+                                        <p class="desc">고객과 함께 만든<br> 풀무원의 사업들.</p>
+                                        <span class="more"><img src="./assets/img/plus.png" alt=""></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="fix-top">
+                <button class="btn-top">
+                    <img src="./assets/img/btn-top.png" alt="">
+                </button>
+            </div>
+
+
+        </main>
+        <footer class="footer">
+            <div class="inner">
+                <h2 class="logo">
+                    <a href=""><img src="https://www.pulmuone.co.kr/pulmuone/images/common/ft_logo.gif" alt="풀무원"> </a>
+                </h2>
+                <div class="wrap">
+                    <nav class="gnb-footer">
+                        <ul class="nav-list">
+                            <li class="nav-item"><a href=""><strong>개인정보처리방침</strong></a></li>
+                            <li class="nav-item"><a href="">이메일주소 무단수집 거부</a></li>
+                            <li class="nav-item"><a href="">사이버감사실</a></li>
+                            <li class="nav-item"><a href="">공장견학</a></li>
+                            <li class="nav-item"><a href="">풀무원채용</a></li>
+                        </ul>
+                    </nav>
+                    <address class="addr-area">
+                        <p>법인명 : (주)풀무원</p>
+                        <p>서울시 강남구 광평로 280 로즈데일빌딩</p>
+                        <p>대표전화 : 080-022-0085</p>
+
+                        <p>Copyright ⓒ Pulmuone Corporate All Rights Reserved.</p>
+                    </address>
+                    <div class="bottom">
+                        <ul class="sns-box">
+                            <li><a href=""><img src="./assets/img/sns01.png" alt="페이스북"></a></li>
+                            <li><a href=""><img src="./assets/img/sns02.png" alt="블로그"></a></li>
+                            <li><a href=""><img src="./assets/img/sns03.png" alt="인스타"></a></li>
+                            <a href=""><img src="./assets/img/sns04.png" alt="유튜브"></a>
+                        </ul>
+
+
+                        <div class="bot-right">
+
+                            <div class="family-box">
+                                계열사/브랜드 사이트
+                                <div class="content">
+                                    <dl class="box01">
+                                        <dt>풀무원</dt>
+                                        <dd><a href="">뮤지엄김치간</a></dd>
+                                        <dd><a href="">원경선 기념관</a></dd>
+                                        <dd><a href="">#풀무원</a></dd>
+                                        <dd><a href="">풀무원채용</a></dd>
+                                        <dd><a href="">efresh 모니터</a></dd>
+                                        <dd><a href="">풀무원재단</a></dd>
+                                    </dl>
+                                    <dl class="box01">
+                                        <dt>계열사</dt>
+                                        <dd><a href="">풀무원녹즙</a></dd>
+                                        <dd><a href="">풀무원푸드머스</a></dd>
+                                        <dd><a href="">풀무원푸드앤컬처</a></dd>
+                                        <dd><a href="">풀무원다논</a></dd>
+                                        <dd><a href="">풀무원샘물</a></dd>
+                                        <dd><a href="">Pulmuone Foods USA</a></dd>
+                                        <dd><a href="">풀무원건강생활</a></dd>
+                                        <dd><a href="">엑소후레쉬</a></dd>
+                                        <dd><a href="">아사히코</a></dd>
+                                        <dd><a href="">푸메이뚜어</a></dd>
+                                    </dl>
+                                    <dl class="box01">
+                                        <dt>브랜드</dt>
+                                        <dd><a href="">풀무원아미오</a></dd>
+                                        <dd><a href="">디자인밀</a></dd>
+                                        <dd><a href="">풀무원로하스</a></dd>
+                                        <dd><a href="">Montereygourmetfoods</a></dd>
+                                        <dd><a href="">WILDWOOD</a></dd>
+                                        <dd><a href="">Nasoya Foods USA</a></dd>
+                                        <dd><a href="">출출박스</a></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <a href="">
+                                    <img src="https://www.pulmuone.co.kr/pulmuone/images/common/icon_footer_220822.png"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+
+    </div>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html
