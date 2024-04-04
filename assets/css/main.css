@@ -375,7 +375,7 @@ body{
 }
 
 .sc-plumu .text-box .desc{
-    margin-top: 30px;
+    /* margin-top: 30px; */
     font-size: 18px;
     line-height: 32px;
     text-align: left;
