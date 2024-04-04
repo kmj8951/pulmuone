@@ -594,10 +594,14 @@ body{
         left: 30px;
         font-size: 30px;
     }
-    .sc-plumu .text-box .more img {
-        margin-top: 5px;
-    }
 
+    .sc-plumu .text-box .desc{
+        transform: translateY(15px);
+    }
+    .sc-plumu .text-box .more img{
+        margin-top: 10px;
+        transform: translateY(15px);
+    }
 
 }
 
